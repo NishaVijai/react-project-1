@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  border: 1px solid #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.box--large {
+  width: 270px;
+  height: 270px;
+}
+
+.box--medium {
+  width: 180px;
+  height: 180px;
+}
+
+.box--small {
+  width: 90px;
+  height: 90px;
+}

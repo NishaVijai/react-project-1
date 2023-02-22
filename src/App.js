@@ -43,20 +43,20 @@ export default function App() {
   }
 
   // custom state hooks
-  function CustomLocalStorageHooks(key, defaultValue = "") {
+  function useCustomLocalStorageHooks(key, defaultValue = "") {
     const [state, setState] = useState(
       () => window.localStorage.getItem(key) || defaultValue
     );
 
     useEffect(() => {
       window.localStorage.setItem(key, state);
-    }, [state]);
+    }, [key, state]);
 
     return [state, setState];
   }
 
   function GreetingForm() {
-    const [userName, setName] = CustomLocalStorageHooks("userName");
+    const [userName, setName] = useCustomLocalStorageHooks("userName");
 
     const handleOnChange = (event) => {
       setName(event.target.value);
